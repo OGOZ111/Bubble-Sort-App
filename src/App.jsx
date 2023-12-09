@@ -1,11 +1,5 @@
 import { useState } from 'react'
 
-
-
-
-
-
-
 function App() {
 
 
@@ -45,11 +39,12 @@ bubbleSort(arr);
 
   return (
     <>
+<div className="container">
+<div className="box">
 
 
-
-<h1>Numbers for Bubble Sort</h1>
-    <input
+<h1>Enter Number and click add to automatically bubble sort</h1>
+    <input className='input'
     type='number'
       value={name}
       onChange={e => setName(e.target.value)}
@@ -57,7 +52,7 @@ bubbleSort(arr);
 
 
 
-    <button onClick={() => {
+    <button className='button' onClick={() => {
       setNumbers([
         ...numbers,
         { name: name }
@@ -67,12 +62,14 @@ bubbleSort(arr);
     }
     
     
-    }>Add</button>
+    }>Add Number</button>
     <ul>
       {numbers.map(number => (
-        <li key={number.name}>{number.name}</li>
+        <li className='result' key={number.name}>{number.name}</li>
       ))}
     </ul>
+    </div>
+    </div>
 
 
     </>
