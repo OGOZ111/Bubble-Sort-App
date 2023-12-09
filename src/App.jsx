@@ -12,7 +12,14 @@ function App() {
   
   function reset()
   {setName("");
+  
 } 
+
+
+function clear()
+{
+  setNumbers([])
+}
   
 
 
@@ -51,7 +58,7 @@ bubbleSort(arr);
  />
 
 
-
+<div className='buttons'>
     <button className='button' onClick={() => {
       setNumbers([
         ...numbers,
@@ -63,6 +70,14 @@ bubbleSort(arr);
     
     
     }>Add Number</button>
+
+  <button className='button' onClick={() => {
+      clear()
+    }
+    
+    
+    }> Reset </button>
+    </div>
     <ul>
       {numbers.map(number => (
         <li className='result' key={number.name}>{number.name}</li>
