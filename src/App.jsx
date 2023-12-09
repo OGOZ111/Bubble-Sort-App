@@ -10,11 +10,11 @@ function App() {
 
 
   const [name, setName] = useState('');
-  const [artists, setArtists] = useState([]);
+  const [numbers, setNumbers] = useState([]);
 
 
-  console.log(artists)
-  const arr = artists
+  //console.log(numbers)
+  const arr = numbers
   
   function reset()
   {setName("");
@@ -58,8 +58,8 @@ bubbleSort(arr);
 
 
     <button onClick={() => {
-      setArtists([
-        ...artists,
+      setNumbers([
+        ...numbers,
         { name: name }
       ]);
       bubbleSort()
@@ -69,8 +69,8 @@ bubbleSort(arr);
     
     }>Add</button>
     <ul>
-      {artists.map(artist => (
-        <li key={artist.name}>{artist.name}</li>
+      {numbers.map(number => (
+        <li key={number.name}>{number.name}</li>
       ))}
     </ul>
 
