@@ -19,6 +19,7 @@ function App() {
 function clear()
 {
   setNumbers([])
+  setName("")
 }
   
 
