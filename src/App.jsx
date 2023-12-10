@@ -22,8 +22,6 @@ function clear()
   setName("")
 }
   
-
-
  
 const bubbleSort = (arr = []) => {
   let swapped;
@@ -39,6 +37,7 @@ const bubbleSort = (arr = []) => {
      };
   }while (swapped);
 }
+
 
 
 bubbleSort(arr);
