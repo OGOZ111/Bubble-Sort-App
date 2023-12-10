@@ -21,7 +21,7 @@ function clear()
   setNumbers([])
   setName("")
 }
-  
+
  
 const bubbleSort = (arr = []) => {
   let swapped;
@@ -60,13 +60,22 @@ bubbleSort(arr);
 
 <div className='buttons'>
     <button className='button' onClick={() => {
-      setNumbers([
-        ...numbers,
-        { name: name }
-      ]);
-      bubbleSort()
-      reset()
-    }
+          if (name.trim() === "") {
+            alert("Input is empty");
+          } else {
+            setNumbers([
+              ...numbers,
+              { name: name }
+            ]);
+            bubbleSort()
+            reset()
+
+
+          ;
+          }
+        }
+
+    
     
     
     }>Add Number</button>
@@ -80,7 +89,7 @@ bubbleSort(arr);
     </div>
     <ul>
       {numbers.map(number => (
-        <li className='result' key={number.name}>{number.name}</li>
+        <li className='result' key={name.name}>{number.name}</li>
       ))}
     </ul>
     </div>
